@@ -132,7 +132,7 @@ main {
   font-size: 16px;
 }
 
-.bground {
+.bground, .thanks {
   display: none;
   position: fixed;
   z-index: 1;
@@ -165,7 +165,7 @@ main {
 
 label {
   font-family: var(--font-default);
-  font-size: 17px;
+  font-size: 14px;
   font-weight: normal;
   display: inline-block;
   margin-bottom: 11px;
@@ -201,6 +201,12 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
+.formData p{
+  font-size: 0.7rem;
+  font-weight: normal;
+  color: #e54858;
+}
+
 /* 
 input[data-error]::after {
     content: attr(data-error);
@@ -280,6 +286,8 @@ input[data-error]::after {
   opacity: 1;
   cursor: pointer;
   transform: scale(0.7);
+  display: flex;
+
 }
 
 .close {
