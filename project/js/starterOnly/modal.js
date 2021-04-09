@@ -14,6 +14,7 @@ const formElt = document.querySelector("form");
 var prenom = document.querySelector("#first");
 var nom = document.querySelector("#last");
 var mail = document.querySelector("#email");
+var birth = document.querySelector("#birthdate");
 var tournaments = document.querySelector("#quantity");
 var cities = document.querySelector("#cities");
 var cgu = document.querySelector("#checkbox1");
@@ -67,6 +68,12 @@ function CheckFormData(){
     email.style = errorStyle;
     dataOk = false;
   }
+  if(Number.isNaN(getAge(birth.value)) || getAge(birth.value) < 5 || getAge(birth.value) > 110){
+    birth.parentNode.getElementsByTagName('p')[0].style.display = "block";
+    birth.style = errorStyle;
+    dataOk = false;
+    console.log("Age not valid");
+  }
   // Checking tournaments value
   if(!valueIsNumber(tournaments.value)){
     tournaments.parentNode.getElementsByTagName('p')[0].style.display = "block";
@@ -107,4 +114,15 @@ function emailIsValid (email) {
 
 function valueIsNumber(value){
   return /^(0|[1-9][0-9]*)$/.test(value);
+}
+
+function getAge(dateString) {
+  var today = new Date();
+  var birthDate = new Date(dateString);
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+  }
+  return age;
 }
