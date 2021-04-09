@@ -33,7 +33,6 @@ img {
   display: flex;
   justify-content: space-between;
   position: relative;
-  overflow: hidden;
   margin-bottom: 3.5%;
 }
 .header-logo {
@@ -138,37 +137,41 @@ main {
   z-index: 1;
   left: 0;
   top: 0;
+  /* max-width: 32rem; */
   height: 100%;
   width: 100%;
   overflow: auto;
   background-color: rgba(26, 39, 156, 0.4);
 }
 
+
 .content {
-  margin: 5% auto;
-  width: 100%;
-  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  max-width: 22em;
+  margin: auto;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
-  background: #232323;
   border-radius: 10px;
-  overflow: hidden;
   position: relative;
+  height: 100%;
   color: #fff;
-  padding-top: 10px;
+  background: #232323;
+}
+
+.thanks p{
+  text-align: center;
 }
 
 .modal-body {
-  padding: 15px 8%;
-  margin: 15px auto;
+  margin: 6%;
 }
 
 label {
   font-family: var(--font-default);
-  font-size: 14px;
+  font-size: 1.5vh;
   font-weight: normal;
   display: inline-block;
-  margin-bottom: 11px;
 }
 input {
   padding: 8px;
@@ -181,7 +184,7 @@ input {
   width: 100%;
   border-radius: 8px;
   font-size: 20px;
-  height: 48px;
+  height: 5vh;
 }
 .formData[data-error]::after {
   content: attr(data-error);
@@ -467,10 +470,10 @@ input[data-error]::after {
 }
 @media screen and (max-width: 900px) {
   body{
-    margin: 2rem;
+    margin: 10px 2rem 0 2rem;
   }
   .header-logo{
-    width: 35%;
+    width: 16vh;
   }
   .hero-section {
     flex-direction: column;
@@ -489,26 +492,32 @@ input[data-error]::after {
     display: none;
   }
   .hero-headline {
+    font-weight: bold;
     font-size: 7vw;
     white-space: normal;
   }
   .hero-text {
     width: unset;
-    margin-top: 30px;
-    font-size: 2.5vw;
+    margin-top: 2vh;
+    font-size: 3vw;
   }
   .hero-img img {
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 2vh;
   }
   .hero-section > .btn-signup {
     display: block;
     margin: 32px auto 10px;
     padding: 12px 35px;
+    font-size: 2vh;
   }
   .copyrights {
     margin-top: 20px;
     text-align: center;
+    font-size: 1.5vh;
+  }
+  .topnav{
+    margin-bottom:auto;
   }
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
@@ -523,10 +532,14 @@ input[data-error]::after {
   }
   .topnav a {display: none;}
   .topnav a.icon {
-    float: right;
+    position: relative;
     display: block;
+    right: -2vw;
+}
   }
-  
+  .content{
+    max-width: none;
+  }
 }
 
 /* Stop responsiveness */ 
