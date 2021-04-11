@@ -55,23 +55,27 @@ function CheckFormData(){
     prenom.parentNode.getElementsByTagName('p')[0].style.display = "block"; // inputElt --> parentNode --> first child of type "p"
     prenom.style = errorStyle;
     dataOk = false;
+    return;
   }
   // Checking last name
   if (nom.value.length < 2){
     nom.parentNode.getElementsByTagName('p')[0].style.display = "block";
     nom.style = errorStyle;
     dataOk = false;
+    return;
   }
   // Checking email
   if(!emailIsValid(email.value)){
     email.parentNode.getElementsByTagName('p')[0].style.display = "block";
     email.style = errorStyle;
     dataOk = false;
+    return;
   }
   if(Number.isNaN(getAge(birth.value)) || getAge(birth.value) < 5 || getAge(birth.value) > 110){
     birth.parentNode.getElementsByTagName('p')[0].style.display = "block";
     birth.style = errorStyle;
     dataOk = false;
+    return;
     console.log("Age not valid");
   }
   // Checking tournaments value
@@ -79,17 +83,20 @@ function CheckFormData(){
     tournaments.parentNode.getElementsByTagName('p')[0].style.display = "block";
     tournaments.style = errorStyle;
     dataOk = false;
+    return;
   }
   // Checking locations 
   if(formElt.elements.location.value == ""){
     formElt.elements.location[0].parentNode.getElementsByTagName('p')[0].style.display = "block";
     cities.style = errorStyle + "padding: 6px;border-radius:9.2px;";
     dataOk = false;
+    return;
   }
   //Checking CGU
   if(!cgu.checked){
     cgu.parentNode.getElementsByTagName('p')[0].style.display = "block";
     dataOk = false;
+    return;
   }
   
   // var rbts = formElt.elements.location.value;

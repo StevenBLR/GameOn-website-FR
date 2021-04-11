@@ -412,6 +412,7 @@ input[data-error]::after {
 }
 /* custom select end */
 .text-label {
+  margin-top: 1vh;
   font-weight: normal;
   font-size: 1.5vh;
 }
