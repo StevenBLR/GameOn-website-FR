@@ -159,6 +159,8 @@ footer {
 
 .thanks p{
   text-align: center;
+  font-size: 5.5vh;
+  font-weight: normal;
 }
 
 .modal-body {
@@ -533,7 +535,7 @@ input[data-error]::after {
     font-size: 1.7vh;
   }
   .topnav{
-    margin-bottom: 0.7vh;
+    margin-bottom: 2.5vh;
   }
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
@@ -556,6 +558,8 @@ input[data-error]::after {
   .content{
     max-width:none;
     width: 100%;
+    display: flex;
+    justify-content: center;
     position: absolute;
     bottom: 0;
     height: 90vh;

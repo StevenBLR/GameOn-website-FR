@@ -11,18 +11,21 @@ const errorStyle = "border: 2px solid;border-color:#e54858;";
 // DOM Elements
 // Form
 const formElt = document.querySelector("form");
-var prenom = document.querySelector("#first");
-var nom = document.querySelector("#last");
-var mail = document.querySelector("#email");
-var birth = document.querySelector("#birthdate");
-var tournaments = document.querySelector("#quantity");
-var cities = document.querySelector("#cities");
-var cgu = document.querySelector("#checkbox1");
+const prenom = document.querySelector("#first");
+const nom = document.querySelector("#last");
+const mail = document.querySelector("#email");
+const birth = document.querySelector("#birthdate");
+const tournaments = document.querySelector("#quantity");
+const cities = document.querySelector("#cities");
+const cgu = document.querySelector("#checkbox1");
 
 // Modal
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const quiBt = document.querySelectorAll(".close");
+
+// Thank panel
+const thankPanel = document.querySelector(".thanks");
 //const formData = document.querySelectorAll(".formData");
 
 // launch modal event
@@ -43,7 +46,6 @@ function quitModal(){
 formElt.addEventListener("submit",function(e)
 {
   e.preventDefault(); // Cancel default submit behaviour
-  //console.log(cgu.checked);
   CheckFormData();
 });
 
@@ -99,8 +101,12 @@ function CheckFormData(){
     return;
   }
   
-  // var rbts = formElt.elements.location.value;
-  // console.log("Debug radio bt value " + rbts);
+  if (dataOk){
+    // Fermer le panneau form
+    quitModal();
+    // Ouvrir le panneau thank
+    thankPanel.style.display = "block";
+  }
 }
 
 function ResetForm(){
