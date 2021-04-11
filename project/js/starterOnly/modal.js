@@ -22,11 +22,10 @@ const cgu = document.querySelector("#checkbox1");
 // Modal
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
-const quiBt = document.querySelectorAll(".close");
+const quiBt = document.querySelectorAll(".close, #btn-close"); // Adding all closing related elements
 
 // Thank panel
 const thankPanel = document.querySelector(".thanks");
-//const formData = document.querySelectorAll(".formData");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -41,6 +40,7 @@ function launchModal() {
 
 function quitModal(){
   modalbg.style.display = "none";
+  thankPanel.style.display = "none";
 }
 
 formElt.addEventListener("submit",function(e)

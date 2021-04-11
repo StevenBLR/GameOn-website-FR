@@ -146,7 +146,8 @@ footer {
 .content {
   display: flex;
   flex-direction: column;
-  max-width: 22em;
+  justify-content: center;
+  max-width: 35em;
   margin: auto;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
@@ -325,6 +326,8 @@ input[data-error]::after {
 .close:after {
   transform: rotate(-45deg);
 }
+
+
 .btn-submit{
   position: absolute;
   bottom: 2rem;
@@ -558,8 +561,6 @@ input[data-error]::after {
   .content{
     max-width:none;
     width: 100%;
-    display: flex;
-    justify-content: center;
     position: absolute;
     bottom: 0;
     height: 90vh;
