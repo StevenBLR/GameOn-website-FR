@@ -72,6 +72,7 @@ img {
 .topnav .icon {
   display: none;
   color: #ff0000;
+  right: -2vw;
 }
 
 main {
@@ -139,7 +140,7 @@ footer {
   height: 100%;
   width: 100%;
   overflow: auto;
-  background-color: rgba(26, 39, 156, 0.4);
+  background-color:rgba(255, 255, 255, 0.4);
 }
 
 
@@ -543,19 +544,21 @@ input[data-error]::after {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
-    right: 0;
+    /* right: -2vw; */
     top: 0;
   }
-  .topnav.responsive a {
+  .topnav.responsive a:not(.icon) {
     float: none;
     display: block;
-    text-align: left;
+    text-align: right;
+    position: relative;
+    right: 3rem;
   }
   .topnav a {display: none;}
   .topnav a.icon {
     position: relative;
     display: block;
-    right: -2vw;
+    /* right: -2vw; */
 }
   
   .content{
