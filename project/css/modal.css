@@ -75,7 +75,7 @@ img {
 }
 
 main {
-  font-size: 130%;
+  /* font-size: 130%; */
   font-weight: bolder;
   color: black;
   padding-top: 0.5vw;
@@ -182,10 +182,14 @@ input {
   padding: 8px;
   width: 100%;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 2vh;
   height: 5vh;
 }
-.formData[data-error]::after {
+.formData {
+  margin-top: 1vh;
+}
+
+/* .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
   color: #e54858;
@@ -196,13 +200,14 @@ input {
   line-height: 0.3;
   opacity: 0;
   transition: 0.3s;
-}
-.formData[data-error-visible="true"]::after {
+} */
+
+/* .formData[data-error-visible="true"]::after {
   opacity: 1;
 }
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
-}
+} */
 .formData p{
   font-size: 0.7rem;
   font-weight: normal;
@@ -219,6 +224,7 @@ input[data-error]::after {
 .checkbox2-label {
   position: relative;
   margin-left: 36px;
+  margin-top: 1.2vh;
   font-size: 1.5vh;
   font-weight: normal;
 }
@@ -478,7 +484,7 @@ input[data-error]::after {
 }
 @media screen and (max-width: 900px) {
   body{
-    margin: 2.5vh 2rem 0 2rem;
+    margin: 1.5vh 2rem 0 2rem;
   }
   .header-logo{
     width: 30vw;
@@ -526,7 +532,7 @@ input[data-error]::after {
     font-size: 1.7vh;
   }
   .topnav{
-    margin-bottom:auto;
+    margin-bottom: 0.7vh;
   }
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
