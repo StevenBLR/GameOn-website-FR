@@ -74,12 +74,6 @@ img {
   color: #ff0000;
 }
 
-
-
-
-
-
-
 main {
   font-size: 130%;
   font-weight: bolder;
@@ -107,8 +101,12 @@ main {
   background: #3876ac;
 }
 
-.footer {
-  font-family: var(--font-slab);
+footer {
+  position: absolute;
+  bottom: 0;
+  /* left: 50%;
+  margin-left: -5.8rem;
+  z-index: -2; */
 }
 
 /* Modal form */
@@ -165,6 +163,7 @@ main {
 
 .modal-body {
   margin: 6%;
+  height: 100%;
 }
 
 label {
@@ -220,19 +219,19 @@ input[data-error]::after {
 .checkbox2-label {
   position: relative;
   margin-left: 36px;
-  font-size: 12px;
+  font-size: 1.5vh;
   font-weight: normal;
 }
 .checkbox-label .checkbox-icon,
 .checkbox2-label .checkbox-icon {
+  position: absolute;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 2vh;
+  height: 2vh;
   border: 2px solid #279e7a;
   border-radius: 50%;
   text-indent: 29px;
   white-space: nowrap;
-  position: absolute;
   left: -30px;
   top: -1px;
   transition: 0.3s;
@@ -269,8 +268,8 @@ input[data-error]::after {
   background: #c4c4c4;
 }
 .checkbox2-label .checkbox-icon::after {
-  width: 7px;
-  height: 4px;
+  width: 0.7vh;
+  height: 0.3vh;
   border-radius: 2px;
   background: transparent;
   border: 2px solid transparent;
@@ -318,11 +317,20 @@ input[data-error]::after {
 .close:after {
   transform: rotate(-45deg);
 }
+.btn-submit{
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  margin-left: -7.1rem;
+}
+.btn-signup{
+  margin: 0 auto;
+}
+  
 .btn-submit,
 .btn-signup {
   background: #fe142f;
   display: block;
-  margin: 0 auto;
   border-radius: 7px;
   font-size: 1rem;
   padding: 12px 82px;
@@ -399,7 +407,7 @@ input[data-error]::after {
 /* custom select end */
 .text-label {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1.5vh;
 }
 .hero-section {
   display: flex;
@@ -470,10 +478,11 @@ input[data-error]::after {
 }
 @media screen and (max-width: 900px) {
   body{
-    margin: 10px 2rem 0 2rem;
+    margin: 2.5vh 2rem 0 2rem;
   }
   .header-logo{
-    width: 16vh;
+    width: 30vw;
+    min-width: 130px;
   }
   .hero-section {
     flex-direction: column;
@@ -514,7 +523,7 @@ input[data-error]::after {
   .copyrights {
     margin-top: 20px;
     text-align: center;
-    font-size: 1.5vh;
+    font-size: 1.7vh;
   }
   .topnav{
     margin-bottom:auto;
@@ -536,9 +545,22 @@ input[data-error]::after {
     display: block;
     right: -2vw;
 }
-  }
+  
   .content{
-    max-width: none;
+    max-width:none;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 90vh;
+  }
+  .bground, .thanks{
+    background-color:transparent;
+  }
+  footer {
+    position: static;
+    bottom: auto;
+    left: auto;
+    margin-left: 0;
   }
 }
 
