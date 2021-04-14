@@ -14,7 +14,6 @@ body {
   margin: 2rem;
   display: flex;
   flex-direction: column;
-  /* background-image: url("background.png"); */
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1150px;
@@ -37,6 +36,8 @@ img {
 }
 .header-logo {
   object-fit: contain;
+  width: auto;
+  height: auto;
 }
 .main-navbar {
     align-self: flex-end;
@@ -47,7 +48,9 @@ img {
 }
 .topnav a {
   float: left;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #000000;
   text-align: center;
   padding: 12px 12px;
@@ -56,7 +59,18 @@ img {
   font-size: 20px;
   font-family: Roboto, sans-serif;
 }
-
+/* .topnav a::after{
+  transition: 1s ease-in-out;
+  background-color: blue;
+  width: 20px;
+}
+.topnav a:hover a:after{
+  content: "";
+  display: block;
+  height: 2px;
+  transform: scaleX(3); 
+}
+*/
 .topnav a:hover {
   background-color: #ff0000;
   color: #ffffff;
@@ -103,11 +117,7 @@ main {
 }
 
 footer {
-  position: absolute;
   bottom: 0;
-  /* left: 50%;
-  margin-left: -5.8rem;
-  z-index: -2; */
 }
 
 /* Modal form */
@@ -194,37 +204,11 @@ input {
   margin-top: 1vh;
 }
 
-/* .formData[data-error]::after {
-  content: attr(data-error);
-  font-size: 0.4em;
-  color: #e54858;
-  display: block;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  text-align: right;
-  line-height: 0.3;
-  opacity: 0;
-  transition: 0.3s;
-} */
-
-/* .formData[data-error-visible="true"]::after {
-  opacity: 1;
-}
-.formData[data-error-visible="true"] .text-control {
-  border: 2px solid #e54858;
-} */
 .formData p{
   font-size: 0.7rem;
   font-weight: normal;
   color: #e54858;
 }
-
-/* 
-input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
-} */
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -427,11 +411,6 @@ input[data-error]::after {
   display: flex;
   border-radius: 10px; 
   color: white;
-  /*
-  grid-template-columns: repeat(12, 1fr);
-  overflow: hidden;
-  margin-bottom: 10px;*/
-
   box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
 }
 .hero-content {
@@ -562,6 +541,7 @@ input[data-error]::after {
   }
   .main-navbar span{
     /* font-size: 1.5vh; */
+    margin: auto;
     font-size: 3.5vw;
     padding-right: 60px;
     padding-left: 5px;
