@@ -36,6 +36,7 @@ quiBt.forEach((btn) => btn.addEventListener("click", quitModal));
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  // Scrolling to the top and disabling scrolling once modal is open
   window.scrollTo(0, 0);
   document.body.style.overflow = "hidden";
 }
@@ -43,6 +44,7 @@ function launchModal() {
 function quitModal(){
   modalbg.style.display = "none";
   thankPanel.style.display = "none";
+  // Reactivate scroll
   document.body.style.overflow = "auto";
 }
 
