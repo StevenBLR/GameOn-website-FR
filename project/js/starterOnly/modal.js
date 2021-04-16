@@ -36,11 +36,14 @@ quiBt.forEach((btn) => btn.addEventListener("click", quitModal));
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  window.scrollTo(0, 0);
+  document.body.style.overflow = "hidden";
 }
 
 function quitModal(){
   modalbg.style.display = "none";
   thankPanel.style.display = "none";
+  document.body.style.overflow = "auto";
 }
 
 formElt.addEventListener("submit",function(e)
