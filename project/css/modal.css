@@ -520,12 +520,13 @@ input {
   }
   .nav-mask{
     position: fixed;
-    height: 274px;
+    height: 100%;
     width: 100%;
     right: 0;
     top: 78px;
     z-index: 2;
     overflow: hidden;
+    pointer-events: none;
   }
 
   .main-navbar{
